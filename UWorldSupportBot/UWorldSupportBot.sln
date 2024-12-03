@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWorldSupportBot", "UWorldSupportBot.csproj", "{9E7FFE12-F2DA-4D94-A59F-0521A42C9FC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UWorldSupportBot", "UWorldSupportBot.csproj", "{9E7FFE12-F2DA-4D94-A59F-0521A42C9FC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogFlowAPI", "..\DialogFlowAPI\DialogFlowAPI.csproj", "{6D1B0FBB-1700-4D46-88E9-56565009CAD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DialogFlowAPI", "..\DialogFlowAPI\DialogFlowAPI.csproj", "{6D1B0FBB-1700-4D46-88E9-56565009CAD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatHubSignalR", "..\ChatHubSignalR\ChatHubSignalR.csproj", "{1F95525B-9252-4CF2-90A3-FD7853FAF30C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6D1B0FBB-1700-4D46-88E9-56565009CAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1B0FBB-1700-4D46-88E9-56565009CAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1B0FBB-1700-4D46-88E9-56565009CAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F95525B-9252-4CF2-90A3-FD7853FAF30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F95525B-9252-4CF2-90A3-FD7853FAF30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F95525B-9252-4CF2-90A3-FD7853FAF30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F95525B-9252-4CF2-90A3-FD7853FAF30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

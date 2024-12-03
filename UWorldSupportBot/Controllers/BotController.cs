@@ -1,8 +1,10 @@
 using DialogFlowAPI;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UWorldSupportBot.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class BotController : ControllerBase
@@ -14,10 +16,15 @@ namespace UWorldSupportBot.Controllers
             _dialogFlowAPIService = dialogFlowAPIService;
 
         }
-        [HttpGet]
-        public async Task<string> Get()
+        [HttpPost]
+        public async Task<string> Get([FromBody] RequestModel model)
         {
-            return await _dialogFlowAPIService.GetResultAsync("adsfsfsd", "course ?");
+            return await _dialogFlowAPIService.GetResultAsync("adsfsfsd", model.Query);
         }
+    }
+
+    public class RequestModel
+    {
+        public string Query { get; set; }
     }
 }
