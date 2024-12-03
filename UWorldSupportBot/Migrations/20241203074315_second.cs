@@ -41,6 +41,8 @@ namespace UWorldSupportBot.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+            migrationBuilder.Sql("INSERT INTO Users ( Username,Email,Password) VALUES ( 'Admin','Admin@gmail.com','Admin')");
+
         }
 
         /// <inheritdoc />
