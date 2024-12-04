@@ -1,11 +1,6 @@
 ﻿using Google.Cloud.Dialogflow.V2;
-using Grpc.Core;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
-using Google.Cloud.Dialogflow.V2;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace UWorldSupportBot.Controllers
@@ -15,10 +10,9 @@ namespace UWorldSupportBot.Controllers
     public class DialogflowWebhookController : ControllerBase
     {
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] WebhookRequest request)
+        public IActionResult HookRequest([FromBody] WebhookRequest request)
         {
             // Log the request for debugging purposes (you can remove this in production)
-            System.Console.WriteLine($"Received Dialogflow webhook request: {JObject.FromObject(request)}");
 
             // Initialize the response object
             var response = new WebhookResponse();
@@ -51,7 +45,7 @@ namespace UWorldSupportBot.Controllers
     // Dialogflow Webhook Request Model
     public class WebhookRequest
     {
-        public QueryResult QueryResult { get; set; }
+        public dynamic QueryResult { get; set; }
         public string ResponseId { get; set; }
     }
 
